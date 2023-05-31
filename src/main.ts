@@ -1,7 +1,9 @@
 import { WechatyBuilder } from "wechaty";
 import QRCode from "qrcode";
 import { ChatGPTBot } from "./bot.js";
+import { EventHandler } from "./event.js";
 import {config} from "./config.js";
+const eventHandler = new EventHandler();
 const chatGPTBot = new ChatGPTBot();
 
 const bot =  WechatyBuilder.build({
@@ -37,6 +39,7 @@ async function main() {
         return;
       }
       try {
+        await eventHandler.onMessage(message);
         await chatGPTBot.onMessage(message);
       } catch (e) {
         console.error(e);
