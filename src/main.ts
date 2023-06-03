@@ -40,7 +40,7 @@ async function main() {
       }
       try {
         await eventHandler.onMessage(message);
-        await chatGPTBot.onMessage(message);
+        // await chatGPTBot.onMessage(message);
       } catch (e) {
         console.error(e);
       }

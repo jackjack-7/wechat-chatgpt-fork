@@ -238,10 +238,9 @@ export class EventHandler {
       return;
     }
     console.log(`🤵 Contact: ${talker.name()} 💬 Text: ${rawText}`)
-    console.log(talker)
     if (talker.name() != '小甜甜百利') {
       return;
     }
-
+    console.log(`🤵 Contact: ${talker.name()} ID: ${talker.id}`)
   }
 }
