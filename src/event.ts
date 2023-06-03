@@ -238,9 +238,8 @@ export class EventHandler {
       return;
     }
     console.log(`🤵 Contact: ${talker.name()} 💬 Text: ${rawText}`)
-    if (talker.name() != '小甜甜百利') {
+    if (talker.id != '@843d698c021ccfbb6330af53d30f5179954a204de6ac83a809538eb6f3399e52') {
       return;
     }
-    console.log(`🤵 Contact: ${talker.name()} ID: ${talker.id}`)
   }
 }
